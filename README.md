@@ -10,7 +10,7 @@ Pequeno sistema de gestão de bibliotecas onde é possível receber livros, orga
 - **Ordenação Dupla** -  Realiza a ordenação de forma que, se temos um atributo igual, ele realiza o ordenação pelo outro atributo selecionado. 
 
 **Exemplo:**
-Autor ascendente, titudo descendente.
+Autor ascendente, titulo descendente.
 
 Título  | Autor | Ano
 ------------- | ------------- | -------------
@@ -29,7 +29,7 @@ Head First Design Patterns | Elisabeth Freeman | 2004
 Patterns of Enterprise Application Architecture| Martin Fowler | 2002
 
 
-- **Ordenação Tripla** - Funciona da mesma forma que a ordenação dupla, se fois atributos selecionados forem iguais, será ordenado pelo atributo selecionado que é diferente, caso apenas um seja diferente, é ordenado pelo ultimo selecionado e caso nenhum seja igual é ordenado pelo ano.
+- **Ordenação Tripla** - Funciona da mesma forma que a ordenação dupla, se dois atributos selecionados forem iguais, será ordenado pelo atributo selecionado que é diferente, caso apenas um seja diferente, é ordenado pelo último selecionado e caso nenhum seja igual, é ordenado pelo ano.
 
 **Exemplo:**
 Edição descendente, Autor descendente, Título ascendente
@@ -46,14 +46,14 @@ Patterns of Enterprise Application Architecture| Martin Fowler | 2002
 
 
 ## Classe GestaoBiblioteca
-Classe utilizada para cuidar da parte visual, realizando a configuração e logica da interface gráfica e chamando seus devidos para que a aplicação funcione.
+Classe utilizada para cuidar da parte visual, realizando a configuração e lógica da interface gráfica e chamando seus devidos métodos para que a aplicação funcione.
 
 ### Métodos da classe GestaoBiblioteca
 
 Nome dos Métodos  | Descrição
 ------------- | -------------
 `readFile()`  | Método para manipulação do arquivo texto "livro.txt".
-`orderBook()` | Método para ordenação, existe mais dois metodos orderBook() porém cada um com uma assinatura diferente, o primeiro para ordenação com apenas um atributo, segundo com dois e terceiro com três.
+`orderBook()` | Método para ordenação, existe mais dois métodos orderBook() porém cada um com uma assinatura diferente, o primeiro para ordenação com apenas um atributo, segundo com dois e terceiro com três.
 `btmOrderActionPerformed()` | Método para validação de qual atributo será utilizado e qual sera sua direção de ordenação.
 
 ## Classe Livro e Comparators
@@ -64,7 +64,7 @@ Nessa classe é encontrada toda a lógica de criação de objeto e métodos de o
 Nome dos Métodos  | Descrição
 ------------- | -------------
 `orderAttribute()`  | Define a partir do atributo a sua ordem de ordenação.
-`orderTitle()` | Método para ordenação do atributo titulo.
+`orderTitle()` | Método para ordenação do atributo título.
 `orderAuthor()` | Método para ordenação do atributo Autor.
 `orderYear()` | Método para ordenação do atributo ano.
 `doubleOrder()` | Método para realizar ordenação com dois atributos.
