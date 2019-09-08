@@ -169,6 +169,14 @@ public class Livro implements Comparable<Livro> {
                         return livro2.getAuthor().compareTo(livro1.getAuthor());
                     }
                 }
+                if(j == 0){
+                    if(ORDEM){
+                        return livro1.getTitle().compareTo(livro2.getTitle());
+                    }
+                    if(!ORDEM){
+                        return livro2.getTitle().compareTo(livro1.getTitle());
+                    }
+                }
                 if(j != 0){
                     if(ORDEM3){
                         return livro1.getYear() - livro2.getYear();
@@ -200,6 +208,30 @@ public class Livro implements Comparable<Livro> {
                 }
                 if(!ORDEM2){
                     return livro2.getAuthor().compareTo(livro1.getAuthor());
+                }
+            }
+            if(j == 0){
+                if(ORDEM){
+                    return livro1.getTitle().compareTo(livro2.getTitle());
+                }
+                if(!ORDEM){
+                    return livro2.getTitle().compareTo(livro1.getTitle());
+                }
+            }
+            if(i == 0){
+                if(ORDEM){
+                    return livro1.getTitle().compareTo(livro2.getTitle());
+                }
+                if(!ORDEM){
+                    return livro2.getTitle().compareTo(livro1.getTitle());
+                }
+            }
+            if(i == 0){
+                if(ORDEM3){
+                    return livro1.getYear() - livro2.getYear();
+                }
+                if(!ORDEM3){
+                    return livro2.getYear() - livro1.getYear();
                 }
             }
             if(i != 0 && j != 0){
