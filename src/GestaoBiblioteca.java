@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 public class GestaoBiblioteca extends javax.swing.JFrame {
 
-    private final String path = "C:/Users/mathe/Desktop/GestaoBiliotecas/livros.txt";
+    private final String path = "./livros.txt";
 
     public GestaoBiblioteca() {
         initComponents();
@@ -198,7 +198,7 @@ public class GestaoBiblioteca extends javax.swing.JFrame {
                 readPathText.close();
 
             } catch (IOException e) {
-                System.out.println("Não foi possível ler o arquivo");
+                JOptionPane.showMessageDialog(null, "Não foi possível ler o arquivo!");
             }
             String[] atributos = conteudo.split(";");
 
@@ -223,8 +223,7 @@ public class GestaoBiblioteca extends javax.swing.JFrame {
             list.add(livro4);
 
         } catch (FileNotFoundException e) {
-            System.out.println("Não foi possível encontrar o arquivo para leitura");
-
+            JOptionPane.showMessageDialog(null, "Não foi possível encontrar o arquivo para leitura!");
         }
         return list;
     }
