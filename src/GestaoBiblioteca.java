@@ -308,10 +308,15 @@ public class GestaoBiblioteca extends javax.swing.JFrame {
         if (!"Empty".equals(atrib1) && !"Empty".equals(atrib2)){
             orderBook(livros, list, atrib1, atrib2, ord_atrib_1, ord_atrib_2);
         }
+        if (!"Empty".equals(atrib2) && !"Empty".equals(atrib3)){
+            orderBook(livros, list, atrib2, atrib3, ord_atrib_2, ord_atrib_3);
+        }
+        if (!"Empty".equals(atrib1) && !"Empty".equals(atrib3)){
+            orderBook(livros, list, atrib1, atrib3, ord_atrib_1, ord_atrib_3);
+        }
         if (!"Empty".equals(atrib1) && !"Empty".equals(atrib2) && !"Empty".equals(atrib3)) {
             orderBook(livros, list, atrib1, atrib2, atrib3, ord_atrib_1, ord_atrib_2, ord_atrib_3);
         }
-        
         if("Empty".equals(atrib1) && "Empty".equals(atrib2) && "Empty".equals(atrib3)){
             JOptionPane.showMessageDialog(null, "Nenhum campo selecionado!");
         }else{
