@@ -1,5 +1,4 @@
 
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -14,64 +13,67 @@ import javax.swing.JOptionPane;
 
 public class GestaoBiblioteca extends javax.swing.JFrame {
 
-    private final String path = "C://Users//mathe//Desktop//GestaoBiliotecas/livros.txt";
-    private int checkT = 0;
-    private int checkA = 0;
-    private int checkY = 0;
+    private final String path = "C:/Users/mathe/Desktop/GestaoBiliotecas/livros.txt";
 
     public GestaoBiblioteca() {
         initComponents();
 
-        /*
-        boxTitle.removeAllItems();
-        boxAuthor.removeAllItems();
-        boxYear.removeAllItems();
-         */
-        boxTitle.addItem("Ascendente");
-        boxTitle.addItem("Descendente");
-        boxTitle.addItem("null");
-        boxTitle.addItem("Empty");
+        box2.removeAllItems();
+        box4.removeAllItems();
+        box6.removeAllItems();
+        box1.removeAllItems();
+        box3.removeAllItems();
+        box5.removeAllItems();
 
-        boxAuthor.addItem("Ascendente");
-        boxAuthor.addItem("Descendente");
-        boxAuthor.addItem("null");
-        boxAuthor.addItem("Empty");
+        box2.addItem("Empty");
+        box2.addItem("Ascendente");
+        box2.addItem("Descendente");
 
-        boxYear.addItem("Ascendente");
-        boxYear.addItem("Descendente");
-        boxYear.addItem("null");
-        boxYear.addItem("Empty");
+        box4.addItem("Empty");
+        box4.addItem("Ascendente");
+        box4.addItem("Descendente");
 
-    }
+        box6.addItem("Empty");
+        box6.addItem("Ascendente");
+        box6.addItem("Descendente");
 
-    public int getCheckT() {
-        return this.checkT;
-    }
+        box1.addItem("Empty");
+        box1.addItem("Title");
+        box1.addItem("Author");
+        box1.addItem("Year");
 
-    public int getCheckA() {
-        return this.checkA;
-    }
+        box3.addItem("Empty");
+        box3.addItem("Title");
+        box3.addItem("Author");
+        box3.addItem("Year");
 
-    public int getCheckY() {
-        return this.checkY;
+        box5.addItem("Empty");
+        box5.addItem("Title");
+        box5.addItem("Author");
+        box5.addItem("Year");
+
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         btmCancel = new javax.swing.JButton();
         btmOrder = new javax.swing.JButton();
-        boxTitle = new javax.swing.JComboBox();
-        boxAuthor = new javax.swing.JComboBox();
-        boxYear = new javax.swing.JComboBox();
-        checkTitle = new javax.swing.JCheckBox();
-        checkAuthor = new javax.swing.JCheckBox();
-        checkYear = new javax.swing.JCheckBox();
+        box2 = new javax.swing.JComboBox();
+        box4 = new javax.swing.JComboBox();
+        box6 = new javax.swing.JComboBox();
+        box1 = new javax.swing.JComboBox<>();
+        box3 = new javax.swing.JComboBox<>();
+        box5 = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         btmCancel.setText("Cancel");
         btmCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -87,93 +89,95 @@ public class GestaoBiblioteca extends javax.swing.JFrame {
             }
         });
 
-        boxTitle.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        box2.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"Item 1", "Item 2", "Item 3", "Item 4"}));
 
-        boxAuthor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        box4.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"Item 1", "Item 2", "Item 3", "Item 4"}));
 
-        boxYear.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        box6.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"Item 1", "Item 2", "Item 3", "Item 4"}));
 
-        checkTitle.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        checkTitle.setText("TITLE");
-        checkTitle.addActionListener(new java.awt.event.ActionListener() {
+        box1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Item 1", "Item 2", "Item 3", "Item 4"}));
+        box1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkTitleActionPerformed(evt);
+                box1ActionPerformed(evt);
             }
         });
 
-        checkAuthor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        checkAuthor.setText("AUTHOR");
-        checkAuthor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkAuthorActionPerformed(evt);
-            }
-        });
+        box3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Item 1", "Item 2", "Item 3", "Item 4"}));
 
-        checkYear.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        checkYear.setText("EDITION YEAR");
-        checkYear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkYearActionPerformed(evt);
-            }
-        });
+        box5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Item 1", "Item 2", "Item 3", "Item 4"}));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("1");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("2");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setText("3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(checkTitle)
-                            .addComponent(checkAuthor))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btmOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btmCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(64, 64, 64)
+                                .addComponent(btmCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(41, 41, 41))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(boxYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(boxAuthor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(boxTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(41, 41, 41))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(checkYear)
-                        .addGap(286, 286, 286))))
+                                        .addComponent(jLabel1)
+                                        .addComponent(jLabel2)
+                                        .addComponent(jLabel3))
+                                .addGap(44, 44, 44)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(box1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(box3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(box5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(76, 76, 76)
+                                                .addComponent(box2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(box6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(box4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(145, 145, 145))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boxTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(checkTitle))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boxAuthor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(checkAuthor))
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boxYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(checkYear))
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btmCancel)
-                    .addComponent(btmOrder))
-                .addGap(36, 36, 36))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(box2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(box1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(box4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(box3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel2))
+                                .addGap(56, 56, 56)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(box6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(box5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel3))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btmCancel)
+                                        .addComponent(btmOrder))
+                                .addGap(36, 36, 36))
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
     private ArrayList readFile() throws FileNotFoundException {
         String conteudo = "";
-        ArrayList<Livro> a = new ArrayList<>();
+        ArrayList<Livro> list = new ArrayList<>();
         try {
             File pathFile = new File(path);
             FileReader readPathText = new FileReader(pathFile);
@@ -197,7 +201,7 @@ public class GestaoBiblioteca extends javax.swing.JFrame {
                 System.out.println("Não foi possível ler o arquivo");
             }
             String[] atributos = conteudo.split(";");
-            
+
             livro.setTitle(atributos[0]);
             livro.setAuthor(atributos[1]);
             livro.setYear(Integer.parseInt(atributos[2]));
@@ -213,115 +217,122 @@ public class GestaoBiblioteca extends javax.swing.JFrame {
             livro4.setTitle(atributos[9]);
             livro4.setAuthor(atributos[10]);
             livro4.setYear(Integer.parseInt(atributos[11]));
-            a.add(livro);
-            a.add(livro2);
-            a.add(livro3);
-            a.add(livro4);
+            list.add(livro);
+            list.add(livro2);
+            list.add(livro3);
+            list.add(livro4);
 
         } catch (FileNotFoundException e) {
             System.out.println("Não foi possível encontrar o arquivo para leitura");
 
         }
-        return a;
+        return list;
     }
 
+    private Livro orderBook(Livro livros, ArrayList<Livro> list, String atributo, String order) {
+        boolean setOrdem = "Ascendente".equals(order);
+        livros.orderAttribute(setOrdem, atributo);
 
-    private void btmOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmOrderActionPerformed
+        if ("Title".equals(atributo)) {
+            livros.orderTitle(list);
+        } else if ("Author".equals(atributo)) {
+            livros.orderAuthor(list);
+        } else if ("Year".equals(atributo)) {
+            livros.orderYear(list);
+        }
+        return livros;
+    }
 
-        GestaoBiblioteca read = new GestaoBiblioteca();
-        ArrayList<Livro> aux = new ArrayList<>();
-        Livro t = new Livro();
-        
-        String directionTitle = boxTitle.getSelectedItem().toString();
-        String directionAuthor = boxAuthor.getSelectedItem().toString();
-        String directionYear = boxYear.getSelectedItem().toString();
+    private Livro orderBook(Livro livros, ArrayList<Livro> list, String atributo1, String atributo2, String order1, String order2) {
+        boolean setOrdem1 = "Ascendente".equals(order1);
+        boolean setOrdem2 = "Ascendente".equals(order2);
+        livros.orderAttribute(setOrdem1, atributo1);
+        livros.orderAttribute(setOrdem2, atributo2);
+
+        if (("Title".equals(atributo1) && "Author".equals(atributo2)) || ("Author".equals(atributo1) && "Title".equals(atributo2))){
+            livros.doubleOrder(list);
+        } else if (("Author".equals(atributo1) && "Year".equals(atributo2)) || ("Year".equals(atributo1) && "Author".equals(atributo2))){
+            livros.doubleOrder(list);
+        } else if (("Titulo".equals(atributo1) && "Year".equals(atributo2)) || ("Year".equals(atributo1) && "Titulo".equals(atributo2))){
+            livros.doubleOrder(list);
+        }
+        return livros;
+    }
+
+    private Livro orderBook(Livro livros, ArrayList<Livro> list, String atributo1, String atributo2, String atributo3, String order1, String order2, String order3) {
+        boolean setOrdem1 = "Ascendente".equals(order1);
+        boolean setOrdem2 = "Ascendente".equals(order2);
+        boolean setOrdem3 = "Ascendente".equals(order3);
+        livros.orderAttribute(setOrdem1, atributo1);
+        livros.orderAttribute(setOrdem2, atributo2);
+        livros.orderAttribute(setOrdem3, atributo3);
+
+        if (!"Empty".equals(atributo1) && !"Empty".equals(atributo2) && !"Empty".equals(atributo3)) {
+            livros.tripleOrder(list);
+        }
+
+        return livros;
+    }
+
+    private void btmOrderActionPerformed(java.awt.event.ActionEvent evt) {
+        String exibe = "";
+        ArrayList<Livro> list = new ArrayList<>();
+        Livro livros = new Livro();
+
+        String atrib1 = box1.getSelectedItem().toString();
+        String atrib2 = box3.getSelectedItem().toString();
+        String atrib3 = box5.getSelectedItem().toString();
+
+        String ord_atrib_1 = box2.getSelectedItem().toString();
+        String ord_atrib_2 = box4.getSelectedItem().toString();
+        String ord_atrib_3 = box6.getSelectedItem().toString();
 
         try {
-            aux = read.readFile();
+            list = readFile();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(GestaoBiblioteca.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        if (directionTitle.equals("Ascendente")) {
-            t.orderAscendente(aux);
-        }
-        if (directionTitle.equals("Descendente")) {
-            t.orderDescendente(aux);
-        }
-
-
-        if (directionAuthor.equals("Ascendente")) {
-            t.orderAscendente(aux);
-        }
-        if (directionAuthor.equals("Descendente")) {
-            t.orderDescendente(aux);
-        }
-
-
-        if (directionYear.equals("Ascendente")) {
-            t.orderAscendente(aux);
-        }
-
-        if (directionYear.equals("Descendente")) {
-            t.orderDescendente(aux);
-        }
-
-        if(checkTitle.isEnabled() == true && checkAuthor.isEnabled() == true){
-        if (directionTitle.equals("Ascendente") && directionAuthor.equals("Descendente")) {
-            t.orderAscendente(aux);
-            t.changeElements(aux);
-        }
-        if (directionTitle.equals("Descendente") && directionAuthor.equals("Ascendente")) {
-            t.orderDescendente(aux);
-            t.changeElements(aux);
-        }
-        }
-
-
         
+        if (!"Empty".equals(atrib1)){
+           orderBook(livros, list, atrib1, ord_atrib_1);
+        }
         
-        if (directionTitle.equals("null") || directionAuthor.equals("null") || directionYear.equals("null")) {
-
+        if (!"Empty".equals(atrib2)){
+           orderBook(livros, list, atrib2, ord_atrib_2);
         }
-
-        if (directionYear.equals("Empty")) {
-            JOptionPane.showMessageDialog(null, "Não foi selecionado uma forma de ordenação!");
+        
+        if (!"Empty".equals(atrib3)){
+           orderBook(livros, list, atrib3, ord_atrib_3);
         }
-    }//GEN-LAST:event_btmOrderActionPerformed
+        
+        if (!"Empty".equals(atrib1) && !"Empty".equals(atrib2)){
+            orderBook(livros, list, atrib1, atrib2, ord_atrib_1, ord_atrib_2);
+        }
+        if (!"Empty".equals(atrib1) && !"Empty".equals(atrib2) && !"Empty".equals(atrib3)) {
+            orderBook(livros, list, atrib1, atrib2, atrib3, ord_atrib_1, ord_atrib_2, ord_atrib_3);
+        }
+        
+        if("Empty".equals(atrib1) && "Empty".equals(atrib2) && "Empty".equals(atrib3)){
+            JOptionPane.showMessageDialog(null, "Nenhum campo selecionado!");
+        }else{
+        exibe = livros.showValues(list);
+        JOptionPane.showMessageDialog(null, exibe);
+    }
+    }
 
-    private void btmCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmCancelActionPerformed
+    private void btmCancelActionPerformed(java.awt.event.ActionEvent evt) {
         btmCancel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
         });
 
-    }//GEN-LAST:event_btmCancelActionPerformed
+    }
 
-
-    private void checkAuthorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkAuthorActionPerformed
-        if (checkAuthor.isSelected() == true) {
-            this.checkA = 1;
-        } else {
-            this.checkA = 0;
-        }
-    }//GEN-LAST:event_checkAuthorActionPerformed
-
-    private void checkYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkYearActionPerformed
-        if (checkYear.isSelected() == true) {
-            this.checkY = 1;
-        } else {
-            this.checkY = 0;
-        }
-    }//GEN-LAST:event_checkYearActionPerformed
-
-    private void checkTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkTitleActionPerformed
-        if (checkTitle.isSelected() == true) {
-            this.checkT = 1;
-        } else {
-            this.checkT = 0;
-        }
-    }//GEN-LAST:event_checkTitleActionPerformed
+    private void box1ActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -331,16 +342,19 @@ public class GestaoBiblioteca extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox boxAuthor;
-    private javax.swing.JComboBox boxTitle;
-    private javax.swing.JComboBox boxYear;
+    // Variables declaration - do not modify                     
+    private javax.swing.JComboBox<String> box1;
+    private javax.swing.JComboBox box2;
+    private javax.swing.JComboBox<String> box3;
+    private javax.swing.JComboBox box4;
+    private javax.swing.JComboBox<String> box5;
+    private javax.swing.JComboBox box6;
     private javax.swing.JButton btmCancel;
     private javax.swing.JButton btmOrder;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JCheckBox checkAuthor;
-    private javax.swing.JCheckBox checkTitle;
-    private javax.swing.JCheckBox checkYear;
-    // End of variables declaration//GEN-END:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    // End of variables declaration                   
 }
