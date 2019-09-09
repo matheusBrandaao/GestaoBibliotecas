@@ -81,7 +81,7 @@ Nome dos Métodos  | Descrição
 `Comparator<Livro> DOUBLE_COMPARATOR` | Realiza as comparações seguindo a regra da ordenação dupla.
 `Comparator<Livro> TITULO_AUTOR_ANO` | Realiza as comparações seguindo a regra da ordenação tripla.
 
-### Técnologias
+### Tecnologias
 - Java
 - Biblioteca Gráfica Swing
 
